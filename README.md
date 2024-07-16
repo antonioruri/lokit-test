@@ -45,6 +45,10 @@ Assicurati di avere installato Node.js e npm (Node Package Manager) sul tuo sist
     ```bash
     npm install
     ```
+3. **Modifica la porta seriale a riga 30 in `index.ts`** 
+   ```bash
+   socat -d -d pty,raw,echo=0 pty,raw,echo=0
+   ```
 
 ### Avvio dell'Applicazione
 
