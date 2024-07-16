@@ -1,6 +1,6 @@
 # Applicazione di Controllo LED
 
-Questa applicazione, sviluppata con Electron e Node.js, simula il controllo di LED tramite una porta seriale virtuale. Permette agli utenti di cliccare su pulsanti che rappresentano i LED, inviando comandi per accenderli o spegnerli. I comandi vengono inviati tramite IPC (Inter-Process Communication) da un processo renderer a un processo main. Il processo main gestisce la comunicazione con la porta seriale virtuale e invia le risposte al processo renderer.
+L'applicazione, sviluppata con Electron e Node.js, simula il controllo di LED tramite una porta seriale virtuale. Permette agli utenti di cliccare su pulsanti che rappresentano i LED, inviando comandi per accenderli o spegnerli. I comandi vengono inviati tramite IPC (Inter-Process Communication) da un processo renderer a un processo main. Il processo main gestisce la comunicazione con la porta seriale virtuale e invia le risposte al processo renderer.
 
 ## Architettura
 
@@ -10,7 +10,7 @@ L'applicazione è composta da due file principali:
 
 ### 1. `index.ts` (Processo Main)
 
-Questo file si occupa di creare la finestra dell'applicazione, inizializzare la porta seriale e gestire i comandi inviati dal processo renderer.
+Si occupa di creare la finestra dell'applicazione, inizializzare la porta seriale e gestire i comandi inviati dal processo renderer.
 
 #### Funzioni Principali:
 - **`createWindow()`**: Crea la finestra principale dell'applicazione.
@@ -48,7 +48,12 @@ Assicurati di avere installato Node.js e npm (Node Package Manager) sul tuo sist
 
 ### Avvio dell'Applicazione
 
- **Avvia l'applicazione**:
+1. **Compila il codice TypeScript**:
+    ```bash
+    npm run build
+    ```
+
+2. **Avvia l'applicazione**:
     ```bash
     npm start
     ```
